@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+n=0
+
+while [ $n -le 9 ]
+do
+	echo "Best School"
+	n=$(( n+1 ))
+done
