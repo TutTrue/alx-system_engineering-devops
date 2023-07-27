@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# print Best School 10 times
 n=0
 until [ $n -ge 10 ]
 do
