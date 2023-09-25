@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# script that transfers a file from our client to a server
+# Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo ufw allow 'Nginx HTTP'
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+sudo service nginx start
