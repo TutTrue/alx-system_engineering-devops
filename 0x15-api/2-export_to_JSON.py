@@ -16,7 +16,7 @@ if __name__ == '__main__':
     if res.status_code == 200:
         data = res.json()
         tasks = tasks.json()
-        user_name = data.get("name")
+        user_name = data.get("username")
         with open(f'{user_id}.json', 'w', newline='') as f:
             json.dump({f"{user_id}": [
                 {
