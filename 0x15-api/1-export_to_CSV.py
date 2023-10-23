@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """for a given id return information about their TODO list"""
-
 import csv
-import sys
 import requests
+import sys
 
 
 if __name__ == '__main__':
@@ -12,7 +11,8 @@ if __name__ == '__main__':
     res = requests.get(
         f'https://jsonplaceholder.typicode.com/users/{user_id}')
     tasks = requests.get(
-        f'https://jsonplaceholder.typicode.com/users/{user_id}/todos')
+        f'https://jsonplaceholder.typicode.com/todos',
+        params={"userId": user_id})
     if res.status_code == 200:
         data = res.json()
         tasks = tasks.json()
