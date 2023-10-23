@@ -19,6 +19,6 @@ if __name__ == '__main__':
         for task in tasks:
             if task.get("completed") is True:
                 done_tasks.append(task.get("title"))
-        print(f'Employee {data.get("name")} is done'
+        print(f'Employee {data.get("name")} is done '
               f'with tasks({len(done_tasks)}/{all_tasks}):')
         print('\n'.join('\t ' + task for task in done_tasks))
